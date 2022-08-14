@@ -37,18 +37,46 @@
           <div class="enTitle">BEAUTIFUL TIANLU</div>
           <div class="roadImg"><img src="../assets/lv.jpeg" alt=""></div>
         </div>
-        <div class="longBgc text-shadow">
-
+        <div class="longBgc  text-shadow">
           <div class="title">热点话题</div>
           <div class="enTitle">HOT TOPIC</div>
-          <div class="longImg"><img src="../assets/lv.jpeg" alt="">
-            <div class="footerTitleImg">
-              <div class="footerBox"><span class="footerDesc ellipsis">四合院民居特色</span>
-                <div class="favorBtn"><img src="../assets/favor.png" alt=""><span
-                    class="favorNum">14</span></div>
+          <div class="hotTopic">
+            <div class="longImg"><img
+                src="http://szyz.yun36524.cn/upload/img/f7820479-7e84-414d-8da8-e9476f9a7d5f.jpg"
+                alt="">
+              <div class="footerTitleImg">
+                <div class="footerBox"><span class="footerDesc ellipsis">四合院民居特色</span>
+                  <div class="favorBtn"><img src="../assets/favor.png" alt=""><span
+                      class="favorNum">14</span></div>
+                </div>
               </div>
             </div>
-
+          </div>
+          <div class="recommend">
+            <div class="recommendTitle">景点推荐</div>
+            <div class="enTitle">RECOMMENDATION</div>
+            <!-- 遍历渲染 -->
+            <div class="viewShow">
+              <img src="../assets/lv.jpeg" alt="">
+              <div class="footerRecommend">
+                <span class="footerDesc ellipsis">四合院民居特色</span>
+                <span class="checkDetail">查看详情</span>
+              </div>
+            </div>
+            <div class="lookAllView">查看所有景点</div>
+          </div>
+          <div class="hotClock">
+            <div class="title">热门打卡</div>
+            <div class="enTitle">POPULAR PUNCH CARD</div>
+            <!-- 遍历渲染  -->
+            <div class="punchCard">
+              <img src="../assets/lv.jpeg" alt="">
+              <div class="footerCard">
+                <span class="footerDesc ellipsis">四合院</span>
+                <div class="yesBtn"><img src="../assets/yes.png" alt=""><span
+                    class="yesNum">已有xxx人打卡</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -59,11 +87,13 @@
 <script>
 import Swiper from "swiper";
 import "swiper/css/swiper.css";
+import data from "../data";
 export default {
   name: "Detail",
   data() {
     return {
       currentSwiper: null,
+      data: data,
     };
   },
   mounted() {
@@ -106,7 +136,7 @@ export default {
   margin: 0 auto;
 }
 .text-shadow {
-  text-shadow: 0 0 3px #000;
+  text-shadow: 0 0 1px #000;
 }
 .datail {
   width: 100%;
@@ -193,7 +223,7 @@ export default {
   background-image: url("../assets/bg.png");
   border-radius: 10px;
   margin-top: 20px;
-  border: 3px solid #f7d59d;
+  border: 1px solid #f7d59d;
   box-shadow: 0.02667rem 0.02667rem 0.3rem rgb(13 4 8 / 50%);
 }
 .title {
@@ -210,7 +240,7 @@ export default {
   color: #f6d4a0;
 }
 .enTitle {
-  width: 250px;
+  padding: 0 20px;
   margin: 0 auto;
   margin-top: 10px;
   text-align: center;
@@ -222,7 +252,7 @@ export default {
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 20px;
-  border: 3px solid #f7d59d;
+  border: 1px solid #f7d59d;
   font-size: 0;
 }
 .roadImg img {
@@ -234,7 +264,7 @@ export default {
   background-image: url("../assets/bg.png");
   border-radius: 10px;
   margin-top: 20px;
-  border: 3px solid #f7d59d;
+  border: 1px solid #f7d59d;
   box-shadow: 0.02667rem 0.02667rem 0.3rem rgb(13 4 8 / 50%);
   background-repeat: repeat;
   background-size: 100%;
@@ -244,7 +274,7 @@ export default {
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 20px;
-  border: 3px solid #f7d59d;
+  border: 1px solid #f7d59d;
   font-size: 0;
 }
 .longImg img {
@@ -252,32 +282,135 @@ export default {
   border-radius: 10px 10px 0 0;
 }
 .footerTitleImg {
-  height: 60px;
+  height: 40px;
   background-image: url("../assets/footer-bg.png");
-  border-radius: 0px 0px 8px 8px;
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  border-radius: 0px 0px 10px 10px;
 }
 .footerBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 60px;
-  padding: 0 45px;
+  height: 40px;
+  padding: 0 10px;
 }
 .footerDesc {
   width: 150px;
-  font-size: 28px;
+  font-size: 16px;
   color: #f6d4a0;
 }
 .favorBtn {
-  width: 80px;
+  width: 50px;
 }
 .favorBtn img {
-  width: 20px;
+  width: 16px;
   margin-right: 10px;
 }
 .favorNum {
-  font-size: 24px;
+  font-size: 18px;
   color: #f6d4a0;
+}
+.recommend {
+  width: 300px;
+  background-image: url("../assets/viewbackground.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+  border: 1px solid #f6d4a0;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.recommendTitle {
+  width: 180px;
+  height: 55px;
+  background-image: url("../assets/title-bg.png");
+  background-repeat: repeat;
+  background-size: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 48px;
+  color: #f6d4a0;
+}
+.viewShow {
+  width: 250px;
+  margin: 0 auto;
+  border: 1px solid #f6d4a0;
+  border-radius: 10px;
+  font-size: 0;
+  margin-top: 20px;
+}
+.viewShow img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px 10px 0 0;
+}
+.footerRecommend {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  background-image: url("../assets/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 0 0 10px 10px;
+}
+.checkDetail {
+  width: 60px;
+  height: 20px;
+  font-size: 12px;
+  color: #f7d59d;
+  background-color: #831f15;
+  border: 1px solid #f7d59d;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 18px;
+}
+.lookAllView {
+  width: 250px;
+  margin: 20px auto;
+  font-size: 24px;
+  text-align: center;
+  color: #f7d59d;
+}
+.punchCard {
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid #f7d59d;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 0;
+}
+.punchCard img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.footerCard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border-radius: 0 0 10px 10px;
+  background-image: url("../assets/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.yesBtn img {
+  width: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.yesNum {
+  width: 50px;
+  vertical-align: middle;
+  color: #f7d59d;
+  font-size: 16px;
 }
 </style>
