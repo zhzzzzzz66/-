@@ -1,6 +1,6 @@
 <template>
   <div class="detail">
-    <div class="detail-bg">
+    <div class="detail-bg" v-show="true">
       <div class="nav w">
         <div class="navBtn"><img src="../assets/back.png" alt=""></div>
       </div>
@@ -81,6 +81,7 @@
         </div>
       </div>
     </div>
+    <Cartoon />
   </div>
 </template>
 
